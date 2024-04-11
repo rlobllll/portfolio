@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+* {margin: 0 auto; padding: 0; }
+li {list-style: none;}
+body {font-style: normal;font-family:  'Pretendard-Thin';} 
+a {text-decoration: none; color: #232637; }
+
+
+#wrap {min-width: 1580px;}
+.centerbox {max-width: 1580px; margin: 0 auto; position: relative;}
+/* 처음,자기소개,목차 */
+header {width: 100%; height: 3240px;}
+.main {width: 100%; height: 3240px; background: url(../images/main.jpg) no-repeat; background-size: cover;}
+
+/* 처음 */
+.main .first {width: 100%; height: 100vh; position: relative;}
+/* 처음 - 포트폴리오 */
+.main .first .portfolio {width: 754px;height: 315px;position: absolute; top: 43%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center;}
+.main .first .portfolio p {font-family: 'GrandifloraOne-Regular'; font-weight: bold; font-size: 100px; position: absolute; z-index: 2;}
+
+.main .first .portfolio:before,
+.main .first .portfolio:after {content:""; position: absolute; width: 500px;height: 500px; border-radius: 50%; transform: rotateX(60deg) rotateY(30deg); animation:port 2s infinite linear; box-shadow: 0 0 10px #fff;}
+.main .first .portfolio:before {border-left:20px solid #fff; border-bottom:20px solid #fff; z-index: -1;}
+.main .first .portfolio:after {border-right:1px solid #fff; border-top:1px solid #fff; z-index: 3;}
+
+@keyframes port {
+    0% {transform:rotateX(60deg) rotateY(30deg) rotate(0);}
+    100% {transform:rotateX(60deg) rotateY(30deg) rotate(360deg);}
+
+}
+
+.main .first .portfolio span.star {position: absolute; animation: star 1s infinite;}
+.main .first .portfolio span.star img {width: 100%;}
+.main .first .portfolio span.star:nth-child(1) {left: 0; top: 100px; animation-delay:0.1s}
+.main .first .portfolio span.star:nth-child(2) {left: 60px; top: 70px;width: 25px; animation-delay:0.3s}
+.main .first .portfolio span.star:nth-child(3) {left: 70%; top: 50px; animation-delay: 0.2s}
+.main .first .portfolio span.star:nth-child(4) {left: 75%; top: 40px;width: 20px; animation-delay:0.5s}
+.main .first .portfolio span.star:nth-child(5) {left: 86%; top: 200px; animation-delay:0.4s}
+
+@keyframes star {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+/* 처음 - 날짜 */
+.main .first .year {position: absolute;width: 37px; height: 750px; right: 100px;bottom: 90px;  background: url('../images/2024.png') no-repeat; animation: num2024 2s forwards;}
+@keyframes num2024 {
+    0% {height: 0px; }
+    100% {height: 750px; }
+}
+/* .main .first .year p{transform: rotate(90deg);font-size: 50px;  } */
+/* .main .first .year p::before {content: "";width: 2px; height: 640px; background: #333; left:427px; top: -282px; position: absolute; transform: rotate(90deg);} */
+/* 처음 - 이름 */
+.main .first .name {position: absolute; height: 37px; width: 0px; top: 750px; left: 150px; background: url('../images/eunbie.png') no-repeat right; animation: eunbie 2s forwards;}
+@keyframes eunbie {
+    0% {width: 0px; }
+    100% {width: 1500px; }
+}
+/* .main .first .name p {font-size: 50px; font-weight: Thin;text-align: right;}
+.main .first .name p::before {content: "";width: 1200px; height: 2px; background: #333; right: 225px; top: 29px; position: absolute;} */
+
+/* 자기소개 */
+.main .intro {max-width: 1550px; height: 100vh; margin-top: 200px;}
+.main .intro .content {height: 700px; display: flex; gap: 50px;}
+.main .intro .content .figure_box {width: 400px; position: relative; flex-shrink: 0;}
+.main .intro .content .figure_box .fig {height: 550px;}
+.main .intro .content .figure_box figure {width: 350px; height: 500px; background: #fff; position: absolute; top: 0px; left: 0px; border-radius: 300px 300px 0 0; background: url('../images/photo.png') 20px 0 no-repeat; }
+.main .intro .content .figure_box.active figure { animation: photo 2s forwards;}
+@keyframes photo {
+    0% {top: 0px; left: 0px; background-position: 20px 0;}
+    100% {top: 40px; left: 50px; background-position: -80px 0;}
+}
+.main .intro .content .figure_box span {width: 350px; height: 500px; background: #d9a8b2; position: absolute; border-radius: 300px 300px 0 0;}
+.main .intro .content .figure_box .info strong {display: block; text-align: right; font-size: 30px; color: #c16578; font-weight: bold; padding-left: 50px;}
+.main .intro .content .figure_box .info p {font-size: 20px; /* font-weight: bold; */ padding-left: 70px;}
+.main .intro .content .figure_box .info p b {color: #000;}
+
+
+.main .intro .content .about {flex-grow: 1;}
+.main .intro .content .about h2 {font-family: 'GrandifloraOne-Regular'; font-size: 50px; text-align: center; position: relative;}
+.main .intro .content .about h2::before,
+.main .intro .content .about h2::after {content: ""; position: absolute; width: 35%; height: 1px; background: #000; top: 40px;}
+.main .intro .content .about h2::before {left: 0;}
+.main .intro .content .about h2::after {right: 0;}
+
+.main .intro .content .about .spec_box {display: flex; flex-wrap: wrap; gap: 36px 50px; padding:100px 50px 0 50px; box-sizing: border-box;}
+.main .intro .content .about .spec_box .spec {width: 26%; flex-grow: 1; font-size: 20px; /* font-weight: bold; */ }
+.main .intro .content .about .spec_box .spec h3 {height: 80px; font-size: 36px; color: #e48ea0; font-family: 'GrandifloraOne-Regular'; }
+.main .intro .content .about .spec_box .spec:nth-child(1) {flex-grow: 0; width: 350px;}
+.main .intro .content .about .spec_box .spec:nth-child(4) {flex-grow: 0; width: 350px;}
+.main .intro .content .about .spec_box .spec p {margin-bottom: 10px;}
+
+
+/* 목차 */
+.main .contents {width: 900px; height: 500px; margin-top: 200px;  display: flex; align-items: flex-start;}
+.main .contents .website {width: 300px; font-size: 30px; }
+.main .contents .website h2 {font-size: 36px;font-family: 'GrandifloraOne-Regular'; height: 120px;}
+.main .contents .website h2 span {font-size: 60px; color: #92a0c0; margin-right: 20px;}
+.main .contents .website .cont {position: relative; } 
+.main .contents .website .cont:before {content: ""; position: absolute; width: 2px; height: 100%; background: #000; left: 26px;}
+.main .contents .website p {height: 60px;text-indent: 60px;}
+.main .contents .website .cont a {font-family: 'Pretendard-Thin'}
+
+.main .contents .banner {width: 500px;font-size: 30px; }
+.main .contents .banner h2 {font-size: 36px;font-family: 'GrandifloraOne-Regular'; height: 120px;}
+.main .contents .banner h2 span {font-size: 60px; color: #92a0c0; margin-right: 20px;}
+.main .contents .banner .cont {position: relative; display: flex; flex-wrap: wrap;}
+.main .contents .banner .cont:before {content: ""; position: absolute; width: 2px; height: 100%; background: #000; left: 26px;}
+.main .contents .banner .cont p {height: 60px; width: 50%; text-indent: 60px;}
+.main .contents .banner .cont a {font-family: 'Pretendard-Thin'}
+
+
+
+/* 버터샵 */
+#buttershop {width: 100%;height: 1080px; background:#e2f0f7; position: relative; }
+
+.site_info { max-width: 1580px; height: 760px; display: flex; gap: 40px; align-items: flex-end; padding-top: 80px; }
+.site_info h3 {position: absolute; width: 744px; height: 409px;left: -140px; background: url('../images/cloud.png') no-repeat; top: 40px; padding-left: 300px; padding-top: 130px; box-sizing: border-box; font-size: 30px; color: #7aafca; font-weight: normal; font-family: 'Pretendard-Thin'; }
+.site_info h3 .en {margin-bottom: 35px;}
+.site_info h3 .ko {font-family: 'Pretendard-ExtraBold'; margin-bottom: 35px;}
+
+.site_info .cloud2 {position: absolute; width: 400px; height: 244px; right: 0; background: url('../images/cloud2.png') no-repeat; top: -150px; font-size: 50px; font-family: 'GrandifloraOne-Regular'; font-weight: bold; text-align: center; line-height: 230px}
+.site_info .cloud3 {position: absolute; width: 700px; height: 500px; right: 0; background: url('../images/cloud.png') no-repeat; bottom: 100px; font-size: 50px; font-family: 'GrandifloraOne-Regular'; font-weight: bold; text-align: center; line-height: 230px}
+
+.site_info .info {width: 680px; }
+.site_info .info ul {display: flex; flex-wrap: wrap;}
+.site_info .info ul li {text-align: left; font-size: 18px; color: #4f95b9; padding-bottom: 15px;}
+.site_info .info ul li.title {width: 150px; font-family: 'Pretendard-ExtraBold' !important;}
+.site_info .info ul li.cont {width: 400px; flex-grow: 1; word-break: keep-all;}
+.site_info .info ul li.cont span.color {display: inline-block; vertical-align: top; width: 19px; height: 19px; border-radius: 50%; background: #000; box-sizing: border-box;}
+.site_info .info ul li.cont span.site_butter:nth-child(1) {background: #ffeeac;}
+.site_info .info ul li.cont span.site_butter:nth-child(2) {background: #b2e2f9;}
+.site_info .info ul li.cont span.site_butter:nth-child(3) {background: #e43a22;}
+a.gosite {background: #7aafca; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
+a.gosite:hover {background: #4a788e; }
+
+.site_info .screen {width: 970px; height: 752px; position: relative;}
+.site_info .screen .pc {width: 908px; height: 752px; background: url('../images/pc.png') no-repeat; position: relative; z-index: 2; }
+.site_info .screen .pc .monitor {width: 870px; height: 500px; position: absolute; z-index: 3;top: 20px; left: 20px; border-radius: 20px; overflow: hidden;}
+.site_info .screen .pc img.pc_screen {width: 970px; height: 752px; position: absolute; }
+.site_info .screen .pc .monitor img {width: 100%; position: absolute; top: 0; transition: 10s linear;}
+
+.site_info .screen .mobile {width: 261px; height: 524px; position: absolute; right: -40px; bottom: 0; z-index: 3; }
+.site_info .screen .mobile .monitor {width: 93%; height: 510px; border-radius: 35px; overflow: hidden; position: absolute; top: 8px; left: 10px;}
+.site_info .screen .mobile .monitor img {width:100%; position: absolute; top: 0; left: 0; transition: 10s linear;}
+.site_info .screen .mobile img.phone {width: 100%;position: absolute; z-index: 2; pointer-events: none; }
+
+
+
+/* 멜론 */
+#melon {width: 100%;height: 100vh; background: url(../images/melon_bg.png) no-repeat; background-size: cover; position: relative;}
+#melon .site_info .info ul li {color: #957fbc;}
+#melon .site_info h3 {color: #957fbc; background: none;}
+#melon .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover2.png'); right: 0; top: -267px; position: absolute;}
+#melon .site_info .info ul li.cont span:nth-child(1) {background: #00cd3b;}
+#melon .site_info .info ul li.cont span:nth-child(2) {background: #c8c4f2;}
+#melon .site_info .info ul li.cont span:nth-child(3) {background: #343434;}
+#melon a.gosite {background: #957fbc; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
+#melon a.gosite:hover {background: #715a9a; }
+#melon .site_info .screen .pc {background: url('../images/pc2.png') no-repeat;}
+
+
+
+/* 월드비전 */
+#worldvision {width: 100%;height: 1080px; background: url(../images/worldvision_bg.png) no-repeat ; background-size: cover; position: relative;}
+#worldvision .site_info {height: 800px;}
+#worldvision .site_info .info ul li {color: #ff7f17;}
+#worldvision .site_info h3 {color: #ff7f17; background: none;}
+#worldvision .site_info .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover2.png'); right: 0; top: -267px}
+#worldvision .site_info .info ul li.cont span:nth-child(1) {background: #f37022;}
+#worldvision .site_info .info ul li.cont span:nth-child(2) {background: #463426;}
+#worldvision .site_info .info ul li.cont span:nth-child(3) {background: #fff;}
+#worldvision .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+#worldvision a.gosite {background: #ff7f17; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
+#worldvision a.gosite:hover {background: #d46103; }
+#worldvision .site_info .screen .pc {height: 850px}
+#worldvision .site_info .screen .pc {background: url('../images/pc3.png') no-repeat;}
+
+
+/* 스타벅스 */
+#starbucks {width: 100%;height: 1080px; background: url(../images/starbucks_bg.png) no-repeat; background-size: cover; position: relative;}
+#starbucks .site_info {height: 800px;}
+#starbucks .site_info .info ul li {color: #5b7b73;}
+#starbucks .site_info h3 {color: #5b7b73; background: none;}
+#starbucks .site_info .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover2.png'); right: 0; top: -267px}
+#starbucks .site_info .info ul li.cont span:nth-child(1) {background: #003629;}
+#starbucks .site_info .info ul li.cont span:nth-child(2) {background: #d7ede1;}
+#starbucks .site_info .info ul li.cont span:nth-child(3) {background: #393631;}
+#starbucks .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+#starbucks a.gosite {background: #5b7b73; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
+#starbucks a.gosite:hover {background: #436059; }
+#starbucks .site_info .screen .pc {height: 850px}
+#starbucks .site_info .screen .pc {background: url('../images/pc4.png') no-repeat;}
+
+
+
+/* 엘지 */
+#lg {width: 100%;height: 1080px; background: url(../images/lg_bg.png) no-repeat; background-size: cover; position: relative;}
+#lg .site_info {height: 800px;}
+#lg .site_info .info ul li {color: #fff;}
+#lg .site_info h3 {color: #fff; background: none;}
+#lg .site_info .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover2.png'); right: 0; top: -267px}
+#lg .site_info .info ul li.cont span:nth-child(1) {background: #c6004d;}
+#lg .site_info .info ul li.cont span:nth-child(2) {background: #fff;}
+#lg .site_info .info ul li.cont span:nth-child(3) {background: #393631;}
+#lg .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+#lg a.gosite {background: #c6004d; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
+#lg a.gosite:hover {background: #a0003d; }
+#lg .site_info .screen .pc {height: 850px}
+#lg .site_info .screen .pc {background: url('../images/pc5.png') no-repeat;}
+
+
+/* 롬앤 */
+#romand {width: 100%;height: 1080px; background: url(../images/romand2.png) no-repeat; background-size: cover; position: relative;}
+#romand .site_info {height: 800px;}
+#romand .site_info .info ul li {color: #ea5a9a;}
+#romand .site_info h3 {color: #ea5a9a; background: none;}
+#romand .site_info .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover2.png'); right: 0; top: -267px}
+#romand .site_info .info ul li.cont span:nth-child(1) {background: #d8bfd4;}
+#romand .site_info .info ul li.cont span:nth-child(2) {background: #fff;}
+#romand .site_info .info ul li.cont span:nth-child(3) {background: #f6e3e5;}
+#romand .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+#romand a.gosite {background: #c6004d; padding:7px 10px; color: #ea5a9a; font-size: 16px; border-radius: 20px;}
+#romand a.gosite:hover {background: #a0003d; }
+#romand .site_info .screen .pc {height: 850px}
+#romand .site_info .screen .pc {background: url('../images/pc6.png') no-repeat;}
+
+
+/* 상페 */
+#detail {width: 100%;height: 1080px; background:#dccfe8; background-size: cover; position: relative;}
+#detail .text {width: 830px; height: 520px; position: absolute; font-size: 150px; font-family: 'Pretendard-ExtraBold'; color: #faecf6; left: 50%; margin-left: -760px;}
+#detail .text .text1 {text-align: right; margin-bottom: -30px; -webkit-text-stroke: 2px #faecf6; color: transparent;}
+#detail .text .text3 {text-indent: 240px; margin-top: -30px;}
+
+#detail .info {width: 300px; position: absolute; top: 530px; left: 50%; margin-left: -450px;}
+#detail .info ul {display: flex; flex-wrap: wrap;}
+#detail .info ul li {text-align: left; font-size: 18px; color: #4f95b9; padding-bottom: 15px;color: #855d93; width: 140px;}
+#detail .img_box {width: 790px; height: 100%; position: absolute; left: 50%; top: 0; margin-left: -130px; display: flex;}
+#detail .img_box figure:first-child {margin-top: 270px;}
+
+
+/* 배너 */
+#banner {width: 100%; background: url(../images/banner_bg2.png) no-repeat; background-size: cover; position: relative; padding-top: 200px; padding-bottom: 200px;}
+#banner .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover5.png'); left: 0; top: -267px; position: absolute;}
+#banner .cloud3 {width: 201px; height: 267px; background: url('../images/img_cover6.png'); right: 0; top: 0px; position: absolute;}
+#banner h2 {position: absolute; font-size: 150px;color: #232637; left: 0; font-size: 150px;font-family: 'GrandifloraOne-Regular'; font-weight: lighter; width: 100%;}
+#banner h2:before {content: ""; position: absolute; width: 2px; height: 700px; background: #000; top: 260px;}
+#banner h2:after {content: ""; position: absolute; width: 70%; height: 2px; background: #000; top: 110px; margin-left: 40px;}
+#banner .text .text1 {text-align: right; margin-bottom: -30px; -webkit-text-stroke: 2px #faecf6; color: transparent;}
+#banner .text .text3 {text-indent: 240px; margin-top: -30px;}
+
+#banner .site_info {position: absolute;}
+#banner .info {width: 400px; position: absolute; top: 260px; left: 100px;}
+#banner .info ul {display: flex; flex-wrap: wrap;}
+#banner .info ul li {text-align: left; font-size: 18px; color: #232637; padding-bottom: 15px;width: 140px;}
+
+#banner .img_box1 {width: 1200px; display: flex; flex-direction: column; margin-left: 300px; padding-top: 200px;}
+#banner .img_box1 figure {width: 830px; height: 130px; margin-bottom: 50px; box-shadow: 0 20px 20px rgba(0,0,0,0.2); font-size: 0;}
+#banner .img_box1 figure img {width: 100%;}
+#banner .img_box1 figure:nth-child(odd) {margin-left: 450px; }
+
+#banner .img_box2 {width: 1400px; display: flex; align-items: flex-start; padding-top: 200px; flex-wrap: wrap; gap: 96px;}
+#banner .img_box2 figure {width: 600px; box-shadow: 0 20px 20px rgba(0,0,0,0.2); font-size: 0;}
+#banner .img_box2 figure img {width: 100%;}
+#banner .img_box2 figure:nth-child(2) {margin-right: 100px;}
+#banner .img_box2 figure:nth-child(3) {margin-left: 100px;}
+
+#banner .img_box3 {display: flex; align-items: flex-start; padding-top: 200px; flex-wrap: wrap; gap: 65px;}
+#banner .img_box3 figure {width: 400px; box-shadow: 0 20px 20px rgba(0,0,0,0.2); font-size: 0; flex-grow: 1;}
+#banner .img_box3 figure:nth-child(2) {margin-top: 100px;}
+#banner .img_box3 figure:nth-child(3) {margin-top: 200px;}
+#banner .img_box3 figure img {width: 100%;}
+
+
+
+/* 푸터 */
+footer {width: 100%; height: 100vh; background: url(../images/footer_bg2.png) no-repeat; background-size: cover;position: relative;}
+footer .cloud2 {width: 201px; height: 267px; background: url('../images/img_cover3.png'); left: 0; top: -267px; position: absolute;}
+footer .cloud3 {width: 201px; height: 267px; background: url('../images/img_cover4.png'); right: 0; top: 0; position: absolute;}
+footer .portfolio {width: 754px;height: 315px;position: absolute; top: 43%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center;}
+footer .portfolio p {font-family: 'GrandifloraOne-Regular'; font-weight: bold; font-size: 100px; position: absolute; z-index: 2;}
+
+footer .portfolio:before,
+footer .portfolio:after {content:""; position: absolute; width: 500px;height: 500px; border-radius: 50%; transform: rotateX(60deg) rotateY(30deg); animation:port 2s infinite linear; box-shadow: 0 0 10px #fff;}
+footer .portfolio:before {border-left:20px solid #fff; border-bottom:20px solid #fff; z-index: -1;}
+footer .portfolio:after {border-right:1px solid #fff; border-top:1px solid #fff; z-index: 3;}
+
+@keyframes port {
+    0% {transform:rotateX(60deg) rotateY(30deg) rotate(0);}
+    100% {transform:rotateX(60deg) rotateY(30deg) rotate(360deg);}
+}
+
+footer .portfolio span.star {position: absolute; animation: star 1s infinite;}
+footer .portfolio span.star img {width: 100%;}
+footer .portfolio span.star:nth-child(1) {left: 0; top: 100px; animation-delay:0.1s}
+footer .portfolio span.star:nth-child(2) {left: 60px; top: 70px;width: 25px; animation-delay:0.3s}
+footer .portfolio span.star:nth-child(3) {left: 70%; top: 50px; animation-delay: 0.2s}
+footer .portfolio span.star:nth-child(4) {left: 75%; top: 40px;width: 20px; animation-delay:0.5s}
+footer .portfolio span.star:nth-child(5) {left: 86%; top: 200px; animation-delay:0.4s}
+
+@keyframes star {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+footer .contact {position: absolute; right: 100px; bottom: 100px; font-size: 30px; text-align: right; line-height: 1.4;}
+footer .contact p {font-family: 'Pretendard-Thin';}
+footer .contact .text1 {margin-bottom: 30px; }
