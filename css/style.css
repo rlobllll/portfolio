@@ -135,7 +135,10 @@ header {width: 100%; height: 3240px;}
 .site_info .info ul li.cont span.site_butter:nth-child(3) {background: #e43a22;}
 a.gosite {background: #7aafca; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
 a.gosite:hover {background: #4a788e; }
+<<<<<<< HEAD
 .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+=======
+>>>>>>> 1a250e1d9ae38d5ac3a04b8e2d5c9aa8577c7df2
 
 .site_info .screen {width: 970px; height: 752px; position: relative;}
 .site_info .screen .pc {width: 908px; height: 752px; background: url('../images/pc.png') no-repeat; position: relative; z-index: 2; }
@@ -206,7 +209,11 @@ a.gosite:hover {background: #4a788e; }
 #lg .site_info .info ul li.cont span:nth-child(1) {background: #c6004d;}
 #lg .site_info .info ul li.cont span:nth-child(2) {background: #fff;}
 #lg .site_info .info ul li.cont span:nth-child(3) {background: #393631;}
+<<<<<<< HEAD
 #lg .site_info .info ul li.cont span.whi {border: 1px solid #fff;}
+=======
+#lg .site_info .info ul li.cont span.whi {border: 1px solid #5c4a3c;}
+>>>>>>> 1a250e1d9ae38d5ac3a04b8e2d5c9aa8577c7df2
 #lg a.gosite {background: #c6004d; padding:7px 10px; color: #fff; font-size: 16px; border-radius: 20px;}
 #lg a.gosite:hover {background: #a0003d; }
 #lg .site_info .screen .pc {height: 850px}
@@ -282,6 +289,10 @@ footer .cloud2 {width: 201px; height: 267px; background: url('../images/img_cove
 footer .cloud3 {width: 201px; height: 267px; background: url('../images/img_cover4.png'); right: 0; top: 0; position: absolute;}
 footer .portfolio {width: 754px;height: 315px;position: absolute; top: 43%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center;}
 footer .portfolio p {font-family: 'GrandifloraOne-Regular'; font-weight: bold; font-size: 100px; position: absolute; z-index: 2;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a250e1d9ae38d5ac3a04b8e2d5c9aa8577c7df2
 footer .portfolio:before,
 footer .portfolio:after {content:""; position: absolute; width: 500px;height: 500px; border-radius: 50%; transform: rotateX(60deg) rotateY(30deg); animation:port 2s infinite linear; box-shadow: 0 0 10px #fff;}
 footer .portfolio:before {border-left:20px solid #fff; border-bottom:20px solid #fff; z-index: -1;}
